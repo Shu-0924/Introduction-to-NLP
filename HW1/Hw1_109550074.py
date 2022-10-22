@@ -17,7 +17,6 @@ for row in csv_reader:
     doc = nlp(row[1])
 
     # Check every word in 'V' is in the sentence
-    V_start_end_idx = [None, None]
     verb_candidates = "-".join(row[3].strip().split()).split("-")
     all_words = "-".join(row[1].strip().split()).split("-")
     if sum([w not in all_words for w in verb_candidates]) > 0:
@@ -31,6 +30,9 @@ for row in csv_reader:
             if token.pos_ == 'VERB' or token.pos_ == 'AUX':
                 verb_idxs.append(j)
             i += 1
+
+    # Find the proper index to start searching
+    V_start_end_idx = [None, None]
     for j, token in enumerate(doc):
         if token.text == verb_candidates[0]:
             V_start_end_idx[0] = j
@@ -73,11 +75,24 @@ for row in csv_reader:
                     break
             i += 1
 
-        # if S_list[0] is not None and S_list[0] in row[2] and O_list[0] is not None and O_list[0] in row[4]:
-        if S_list[0] is not None and (S_list[0] in row[2] or row[2] in S_list[0]) and O_list[0] is not None and (O_list[0] in row[4] or row[4] in O_list[0]):
+        # move to next verb if we can not find subject or object
+        if S_list[0] is None or O_list[0] is None:
+            print(f"row No.{len(result)} with {doc[verb_idx].pos_} '{doc[verb_idx]}': ")
+            print(f"(S, V, O) -> ({S_list[0]}, {doc[verb_idx]}, {O_list[0]}), result: {result[-1]}\n")
+            continue
+
+        # remove punctuation before comparing
+        row[2] = ' '.join([token.text for token in nlp(row[2]) if token.pos_ != 'PUNCT'])
+        row[4] = ' '.join([token.text for token in nlp(row[4]) if token.pos_ != 'PUNCT'])
+        S_list[0] = ' '.join([token.text for token in nlp(S_list[0]) if token.pos_ != 'PUNCT'])
+        O_list[0] = ' '.join([token.text for token in nlp(O_list[0]) if token.pos_ != 'PUNCT'])
+
+        # comparing by some trick
+        if (S_list[0] in row[2] or row[2] in S_list[0]) and (O_list[0] in row[4] or row[4] in O_list[0]):
             result[-1] = 1
-        # print(f"row No.{len(result)+1} with {doc[verb_idx].pos_} '{doc[verb_idx]}': ")
-        # print(f"(S, V, O) -> ({S_list[0]}, {doc[verb_idx]}, {O_list[0]}), result: {result[-1]}\n")
+
+        print(f"row No.{len(result)} with {doc[verb_idx].pos_} '{doc[verb_idx]}': ")
+        print(f"(S, V, O) -> ({S_list[0]}, {doc[verb_idx]}, {O_list[0]}), result: {result[-1]}\n")
 
 
 fin.close()
@@ -109,7 +124,8 @@ print(f"False negative: {100*float(false_negative)/len(result)}%")
 
 """
 # Debug tool
-doc = nlp("Rhodes discovered he had cancer last October after he felt a sharp pain in his right leg .")
+text = "For one thing , members of Congress and their staffs have a traditional `` defined benefit '' program , meaning that they know exactly what they 'll get upon retirement ."
+doc = nlp(text)
 for token in doc:
     print(f"{token.text}\t{token.pos_}\t{token.dep_}\t{token.head.text}\t{[a for a in token.subtree]}")
 """
