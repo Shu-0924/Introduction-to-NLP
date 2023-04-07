@@ -30,7 +30,7 @@
 
 &emsp;&emsp;https://www.kaggle.com/competitions/2022-inlp-final
 
-&emsp;&emsp;Fact checking with almost useless raw evidences
+&emsp;&emsp;Fact checking with quite noisy raw web articles
 
 &emsp;&emsp;Method: TF-IDF + BERT fine-tuning
 
