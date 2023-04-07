@@ -2,7 +2,7 @@
 
 ## &emsp;HW1 - Relation Extraction
 
-&emsp;&emsp;https://www.kaggle.com/competitions/111-1-nlp-hw1
+&emsp;&emsp;https://www.kaggle.com/competitions/111-1-nlp-hw1  (Rank: 4)
 
 &emsp;&emsp;Given a sentence and a (S, V, O) tuple, the task is to decide if the tuple contains the relation in the sentence
 
@@ -10,7 +10,7 @@
 
 ## &emsp;HW2 - Sentiment Analysis
 
-&emsp;&emsp;https://www.kaggle.com/competitions/2022inlp-hw2
+&emsp;&emsp;https://www.kaggle.com/competitions/2022inlp-hw2  (Rank: 5)
 
 &emsp;&emsp;Sentiment analysis by neural networks (LLMs are prohibited)
 
@@ -20,7 +20,7 @@
 
 ## &emsp;HW3 - Machine Reading Comprehension
 
-&emsp;&emsp;https://www.kaggle.com/competitions/111-1-nlp-hw3
+&emsp;&emsp;https://www.kaggle.com/competitions/111-1-nlp-hw3  (Rank: 12)
 
 &emsp;&emsp;Chinese multiple-choice questions answering (c3 dataset)
 
@@ -28,7 +28,7 @@
 
 ## &emsp;Final project - Evidence-based Fact Checking
 
-&emsp;&emsp;https://www.kaggle.com/competitions/2022-inlp-final
+&emsp;&emsp;https://www.kaggle.com/competitions/2022-inlp-final  (Group Rank: 1)
 
 &emsp;&emsp;Fact checking with quite noisy raw web articles
 
