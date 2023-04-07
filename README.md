@@ -34,6 +34,6 @@
 
 &emsp;&emsp;Method: TF-IDF + BERT fine-tuning
 
-&emsp;&emsp;"train_evidence_v3.json", "valid_evidence_v3.json", "test_evidence_v3.json" are produced by Final_TFIDF_v3.py
+&emsp;&emsp;All "train_evidence_v3.json", "valid_evidence_v3.json", "test_evidence_v3.json" are produced by Final_TFIDF_v3.py
 
 &emsp;&emsp;Visit the Kaggle website above if you want to view raw data and evidence
