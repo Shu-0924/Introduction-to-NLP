@@ -26,4 +26,10 @@
 
 &emsp;&emsp;Method: BERT fine-tuning
 
+## &emsp;Final project - Evidence-based Fact Checking
 
+&emsp;&emsp;https://www.kaggle.com/competitions/2022-inlp-final
+
+&emsp;&emsp;Fact checking with almost useless evidences
+
+&emsp;&emsp;Method: TF-IDF + BERT fine-tuning
