@@ -15,3 +15,5 @@
 &emsp;&emsp;Sentiment analysis by neural networks (LLMs are prohibited)
 
 &emsp;&emsp;Method: Using CNN + RNN + Attention Layer
+
+&emsp;&emsp;Note: You need to download "glove.6B.300d.txt" and place it to the same folder to run the code
