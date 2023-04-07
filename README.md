@@ -17,3 +17,13 @@
 &emsp;&emsp;Method: Using CNN + RNN + Attention Layer
 
 &emsp;&emsp;Note: You need to download "glove.6B.300d.txt" and place it to the same folder to run the code
+
+## &emsp;HW3 - Machine Reading Comprehension
+
+&emsp;&emsp;https://www.kaggle.com/competitions/111-1-nlp-hw3
+
+&emsp;&emsp;Chinese multiple-choice questions answering (c3 dataset)
+
+&emsp;&emsp;Method: BERT fine-tuning
+
+
