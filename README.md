@@ -36,4 +36,6 @@
 
 &emsp;&emsp;All "train_evidence_v3.json", "valid_evidence_v3.json", "test_evidence_v3.json" are produced by Final_TFIDF_v3.py
 
+&emsp;&emsp;You can see the code and result of training in notebook 
+
 &emsp;&emsp;Visit the Kaggle website above if you want to view raw data and articles
