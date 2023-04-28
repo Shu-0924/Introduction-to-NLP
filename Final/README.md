@@ -1,4 +1,4 @@
-## Final project - Evidence-based Fact Checking
+# Final project - Evidence-based Fact Checking
 
 &emsp;https://www.kaggle.com/competitions/2022-inlp-final  (Group Rank: 1)
 
